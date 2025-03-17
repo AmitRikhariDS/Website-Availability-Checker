@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+</head>
+<body>
+    
+ {#
+ {% for key,value in results.items()%}
+ <h1> Your {{key}} is <i>{{value}}</i></h1>
+ {% endfor %}
+ #} 
+
+  {% if results>=50 %}
+  <h1>you are Passed as your score is {{results}}</h1>
+  {% else %}
+  <h1>You are failed as your score is {{results}}</h1>
+  {% endif %}
+</body>
+</html>

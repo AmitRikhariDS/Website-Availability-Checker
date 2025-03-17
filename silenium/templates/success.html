@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Result Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+            background-color: #e3fcef;
+        }
+        .container {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+            margin: auto;
+            animation: fadeIn 0.8s ease-in-out;
+        }
+        h2 {
+            color: #28a745;
+        }
+        p {
+            color: #333;
+        }
+        button {
+            background: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            width: 100%;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+        button:hover {
+            background: #0056b3;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    {%if sent==1 %}
+
+    <div class="container">
+        <h2>✅ Success!</h2>
+        <p>Your submitted URL:</p>
+        <p><strong>{{ url }}</strong>is up and running.</p>  <!-- Displays the submitted URL -->
+        <button onclick="goBack()">Back to Home</button>
+    </div>
+ 
+    {%else%}
+    <div class="container">
+        <h2> Failure!</h2>
+        <p>Your submitted URL:</p>
+        <p><strong>{{ url }}</strong> is Down</p>  <!-- Displays the submitted URL -->
+        <button onclick="goBack()">Back to Home</button>
+    </div>
+    {%endif%}
+
+    <script>
+        function goBack() {
+            window.location.href = "/";  // Redirect to home page
+        }
+    </script>
+
+</body>
+</html>
