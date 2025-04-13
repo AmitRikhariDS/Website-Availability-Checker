@@ -10,8 +10,7 @@ from email.mime.multipart import MIMEMultipart
 from webdriver_manager.chrome import ChromeDriverManager
 
 app = Flask(__name__)
-sent = 0  # Global flag to track if the email was sent
-
+sent = 0 
 SENDER_EMAIL = "techyink011@gmail.com"
 SENDER_PASSWORD = "fyze kbcu spvp lzgf"
 # RECEIVER_EMAIL = "amitrikhari011@gmail.com"
